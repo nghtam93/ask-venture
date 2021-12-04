@@ -17,12 +17,18 @@
             line-height: 54px;
         }
     }
+    @media (max-width: 991px){
+        &__title {
+            font-size: 32px;
+            line-height: 50px;
+        }
+    }
     @media (max-width: 575px){
-        margin: 0 auto 30px;
+        margin: 0 auto 24px;
 
         &__title {
-            font-size: 30px;
-            line-height: 42px;
+            font-size: 24px;
+            line-height: 32px;
         }
     }
 
@@ -81,6 +87,9 @@
     .input-text{
         border-radius: 8px;
         padding: 15px 160px 15px 15px;
+        background: transparent;
+        border-color: #5693c3;
+        color: #fff;
     }
     .input-submit{
         position: absolute;
@@ -93,7 +102,7 @@
         line-height: 24px;
         color: #FFFFFF;
         background: #5693C3;
-        border-radius: 8px;
+        border-radius: 0px 8px 8px 0;
         border: 0;
         transition: all .5s;
         &:hover{
@@ -109,6 +118,38 @@
         .el__box {
             left: 0;
         }
+    }
+    @media (max-width: 575px){
+        .el__box {
+            padding: 24px;
+            &:before {
+                width: 90px;
+                height: 80px;
+                top: auto;
+                bottom: -65px;
+                left: 40%;
+            }
+        }
+        .el__box__title {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 12px;
+        }
+        .el__box__excerpt {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+        .input-text {
+            padding: 10px 90px 10px 10px;
+            font-size: 12px;
+        }
+        .input-submit {
+            width: 80px;
+            font-size: 12px;
+        }
+
+
     }
 }
 

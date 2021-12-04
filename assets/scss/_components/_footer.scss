@@ -72,16 +72,18 @@
 		}
 	}
 	@media (max-width: 991px){
-		padding: 50px 0 16px;
-		&__logo{
-			margin-top: 0;
-			margin-bottom: 15px;
-		}
+
 	}
 	@media (max-width: 767px){
 
 	}
 	@media (max-width: 575px){
-
+		&__text {
+		    font-size: 14px;
+		}
+		.copyright {
+		    padding: 24px 0;
+		    font-size: 13px;
+		}
 	}
 }

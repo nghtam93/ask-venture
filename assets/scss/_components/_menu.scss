@@ -131,7 +131,7 @@
 .modal-open{overflow:hidden;}
 body.modal-open{
     .header{
-        background: #151134;
+        background: #020B1C;
     }
 }
 .nav__mobile{
@@ -142,13 +142,25 @@ body.modal-open{
     left:-420px;
     width:400px;
     opacity:0;
-    background:#151134;
+    background:#020B1C;
     transition:all .25s;
     z-index:9999;
     font-weight: 600;
     font-size: 14px;
     pointer-events: none;
     overflow: auto;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: url(../img/menu-mb-bg.png) no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        z-index: -1;
+    }
     &--close {
         position: relative;
         top: 2px;
@@ -169,7 +181,7 @@ body.modal-open{
     &__content{
         position: relative;
         overflow-y:auto;
-        padding: 20px 0;
+        padding: 50px 0 20px;
     }
     &.active{
         left:0;
@@ -178,39 +190,31 @@ body.modal-open{
     }
     .nav__mobile--ul{
         list-style:none;
+        padding: 0 16px;
         li{
             position:relative;
-            margin-bottom: 10px;
+            margin-bottom: 24px;
+            text-align: center;
             a{
                 position: relative;
                 font-weight: 600;
-                font-size: 18px;
-                line-height: 24px;
+                font-size: 20px;
+                line-height: 32px;
+                border: 1px solid #29344A;
+                box-sizing: border-box;
+                border-radius: 4px;
                 color: #FFFFFF;
-                padding: 15px 50px;
+                padding: 14px 50px;
                 display: block;
-                border-bottom: 1px solid transparent;
                 transition: all .5s;
-                &:before{
-                    content: '';
-                    position:absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0;
-                    height: 1px;
-                    background-color: #fff;
-                    transition: all .5s;
-                }
                 &:hover{
                     color:$color_primary;
                 }
             }
             &.active, &.current-menu-item, &.current_page_item, &:hover{
                 &>a{
-                    color: #fff;
-                    &:before{
-                        width: 100%;
-                    }
+                    color: #6DC6DA;
+                    border-color: #2E729D;
                 }
             }
         }
@@ -220,7 +224,7 @@ body.modal-open{
         .nav__mobile--ul{
             li{
                 a{
-                    font-size: 16px;
+
                 }
             }
         }
