@@ -25,6 +25,15 @@
             align-items: center;
             z-index: 1;
         }
+        &__logo{
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            img{
+                max-height: 210px;
+            }
+        }
         .el{
             &__meta {
                 position: absolute;
@@ -428,6 +437,9 @@
     }
     @media (max-width: 1199px){
         &-banner{
+            &__logo img {
+                max-height: 150px;
+            }
             .el__thumb {
                 margin: 0 auto 30px;
             }
@@ -465,6 +477,9 @@
 
     @media (max-width: 991px){
         &-banner{
+            &__logo img {
+                max-height: 130px;
+            }
             .el__excerpt {
                 font-size: 18px;
                 line-height: 32px;
