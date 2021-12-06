@@ -54,8 +54,18 @@
                 color: #D4E1EC;
                 padding: 0 15px;
             }
-
-
+        }
+        &__icon {
+            position: absolute;
+            bottom: -160px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            animation: Mousex 1.5s infinite ease-in-out;
+            img{
+                width: auto;
+                max-height: 77px;
+            }
         }
     }
     &-about{
@@ -434,6 +444,12 @@
         &-banner__wrap {
             top: 15%;
         }
+        &-banner__icon {
+            bottom: -200px;
+        }
+        &-about::before {
+            left: 0;
+        }
     }
     @media (max-width: 1199px){
         &-banner{
@@ -446,7 +462,7 @@
         }
 
         &-about {
-            padding: 140px 0 60px;
+            padding: 250px 0 60px;
             .el__box{
                 padding: 80px 50px 50px;
             }
@@ -486,7 +502,7 @@
             }
         }
         &-about{
-            padding: 140px 0 160px;
+            padding: 250px 0 160px;
             .el__thumb {
                 max-width: 500px;
                 margin: 0 auto 100px;
@@ -531,7 +547,7 @@
             }
         }
         &-about{
-            padding: 140px 0 120px;
+            padding: 250px 0 120px;
             .el__thumb:before {
                 width: 120%;
             }

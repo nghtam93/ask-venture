@@ -110,18 +110,12 @@ transform: matrix(1, 0, 0, -1, 0, 0);
 
 /* Fix WP*/
 .admin-bar{
-	.header.-fix, .nav__mobile{
-	    top: 32px;
-	}
-	@media (max-width: 782px) {
+	@media (min-width: 992px) {
 	    .header.-fix, .nav__mobile{
-	        top: 46px;
-	    }
+		    top: 32px;
+		}
 	}
 	@media (max-width: 767px) {
-	    .header.-fix{
-	        top: 0;
-	    }
 	    #wpadminbar{
 	        display: none;
 	    }

@@ -66,6 +66,7 @@ table {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 a {
     outline: none;
@@ -276,6 +277,9 @@ br{
     .col-lg-54{
         flex: 0 0 auto;
         width: 54%;
+    }
+    .col-lg-60{
+        width: 60%;
     }
 }
 @media (min-width: 1200px){

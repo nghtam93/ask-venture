@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
+    /*----Get Header Stick ---*/
     var header_sticky=$("header.-fix")
-
     $(window).scroll(function(){
         $(this).scrollTop()>5?header_sticky.addClass("is-active"):header_sticky.removeClass("is-active")
     })
+    $( window ).on( "load", function() {
+        (header_sticky.offset().top >5) ? header_sticky.addClass("is-active"):header_sticky.removeClass("is-active")
+    });
 
     /*----Languages---*/
     $('.languages .languages-item').click(function() {
@@ -39,6 +42,7 @@ $(document).ready(function(){
     // Click id a
     var jump=function(e)
     {
+        $(document).off("scroll");
         if (e){
            e.preventDefault();
            var target = $(this).attr("href");
@@ -46,10 +50,14 @@ $(document).ready(function(){
            var target = location.hash;
         }
 
-        $('html,body').animate({scrollTop: $(target).offset().top},2000,function(){
-           location.hash = target;
+        $('html, body').stop().animate({
+            'scrollTop': $(target).offset().top
         });
+
+        location.hash = target;
     }
+    $('a[href^="#"]').bind("click", jump);
+
     $(document).on('click', 'a[href^="#"], a[href*=".html#"]', function (e) {
 
         $(this).closest('nav').find('li').removeClass('active')

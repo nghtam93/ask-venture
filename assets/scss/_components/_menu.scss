@@ -93,7 +93,7 @@
             overflow: hidden;
             li{
                 position:relative;
-                line-height:20px;padding:13px 15px;
+                line-height:20px;
                 &:not(:last-child){
                     border-bottom:1px solid rgba(255,255,255,0.1);
                 }
@@ -103,7 +103,11 @@
                         color:#fff;
                     }
                 }
-               a{color:#ffffff;}
+               a{
+                display: block;
+                padding:13px 15px;
+                color:#ffffff;
+               }
             }
             .sub-menu{top:0;left:100%;}
         }
