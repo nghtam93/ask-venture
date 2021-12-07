@@ -81,55 +81,75 @@ strong{
 .videoWrapper{position:relative;padding-bottom:56.25%; /* 16:9 */height:0;}
 .videoWrapper iframe,.videoWrapper object,.videoWrapper embed,.videoWrapper video{position:absolute;top:0;left:0;width:100%;height:auto;}
 
-/* Slider */
 
-.slickfix .slick-list{margin:0 -50px;}
-.slickfix .slick-slide{margin:0 50px;}
+/* Slider */
 .slick-arrow{
-    border: 2px solid #06a964;
-    color: #06a964;
-    font-size: 14px;
+    border: 0;
+    background:transparent;
+    color: transparent;
+    font-size: 28px;
     width: 40px;
     height: 40px;
-    line-height: 38px;
+    line-height: 40px;
     border-radius: 50%;
     text-align: center;
-    --arrow: -56px;
+    font-weight: 400;
+    --arrow: -65px;
     transition: all .5s;
+
     &.slick-disabled{
         opacity: .6;
     }
-    &:hover {
-        box-shadow: 0px 0px 10px #3affac;
+    @media (max-width:1299px){
+        --arrow: 0;
+        font-size: 14px;
+        background: #94deff;
+        &:before{
+            color: #271a57!important;
+        }
     }
 }
-.slick-dots li{
-    margin: 0 10px;
-    &:before {
-        content: "";
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        width: 20px;
-        height: 20px;
-        border: 1px solid #17b978;
-        border-radius: 50%;
-        opacity: 0;
+.slick-prev{
+    &:hover{
+        transform:translateY(-50%) translateX(-5px);
     }
-    button {
-        background: #FFFFFF;
-        opacity: 0.2;
+}
+.slick-next{
+    &:hover{
+        transform:translateY(-50%) translateX(5px);
     }
-    &.slick-active, &:hover{
-        &:before {
-            opacity: 1;
-        }
+}
+.slick-prev:before, .slick-next:before {
+    content: '\e901';
+    font-family: 'icomoon';
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+}
+.slick-next:before{
+    content: '\e902';
+}
+
+.slick-dots{
+    bottom: -45px;
+    li{
+        margin: 0;
         button{
-            background: #17B978;
-            opacity: 1;
+            position: relative;
+            width: 45px;
+            height: 4px;
+            border-radius: 0;
+            background-color: #C2CED2;
+            transition: all .5s;
+        }
+        &.slick-active button, &:hover button{
+            border-radius: 4px;
+            background-color: #183FCB;
         }
     }
 }
+
+
 /**/
 .dnfix__thumb{position:relative;height:auto;width:100%;overflow:hidden;display:block;padding-top:68.075%;}
 .dnfix__thumb img{margin:0px auto;position:absolute;width:100%;height:100%;top:0;left:0;object-fit:cover}
