@@ -29,7 +29,7 @@ $cat_link = get_category_link($categories[0]);
         <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink() ?>" class="-fb"><span class="icon-facebook"></span></a>
         <a href="https://telegram.me/share/url?url=<?php the_permalink() ?>&text=<?php the_title() ?>" class="-tele"><span class="icon-telegram"></span></a>
         <a href="https://twitter.com/intent/tweet?&url=<?php the_permalink() ?>" class="-tw"><span class="icon-twitter"></span></a>
-        <a href="" class="-zalo"><span class="icon-zalo"></span></a>
+
       </div>
 
     </div>

@@ -129,6 +129,11 @@ $(document).ready(function(){
                 }
             ]
         });
+
+        Fancybox.bind("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']", {
+          groupAttr: false,
+        });
+
     }
 
 });

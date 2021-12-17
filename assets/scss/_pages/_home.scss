@@ -14,6 +14,7 @@
             width: 100%;
             height: 300px;
             background: linear-gradient(360deg, #020B1C 0%, rgba(2,11,28,0) 100%);
+            pointer-events: none;
         }
         &__wrap{
             position: absolute;
@@ -167,6 +168,7 @@
             background: url(../img/home-mission-bg-right.png) no-repeat;
             background-size: contain;
             background-position: right;
+            pointer-events: none;
         }
         &::after {
             content: '';
@@ -177,6 +179,7 @@
             height: 37px;
             background: url(../img/home-mission-bg-left.png) no-repeat;
             background-size: contain;
+            pointer-events: none;
         }
 
         .el__item{
@@ -214,6 +217,7 @@
                 height: 60px;
                 background: url(../img/quote-left.svg) no-repeat;
                 background-size: contain;
+                pointer-events: none;
             }
             &__title{
                 font-weight: 600;

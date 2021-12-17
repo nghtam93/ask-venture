@@ -42,8 +42,8 @@
                     font-family: 'icomoon';
                     font-size: 5px;
                     margin-left: 5px;
-                    position: relative;
-                    top: -3px;
+                    position: absolute;
+                    top: 27px;
                     font-weight: 400;
                 }
             }
@@ -55,7 +55,7 @@
                 &:before{
                     content: "";
                     position: absolute;
-                    bottom: -3px;
+                    bottom: 0px;
                     left: 0;
                     right: 0;
                     width: 0;

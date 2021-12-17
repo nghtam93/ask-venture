@@ -12,6 +12,8 @@
 	    background-size: cover;
 	    background-position: center;
 	    opacity: .2;
+	    z-index: -1;
+	    pointer-events: none;
 	}
 	.entry-content{
 		font-weight: normal;

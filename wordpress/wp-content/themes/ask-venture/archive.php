@@ -78,7 +78,9 @@ $template = get_field('template',$term);
       <?php if ( $the_query->have_posts() ) : $i=0; ?>
         <div class="el__box wow fadeInUp">
           <div class="row">
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++;
+              $categories = get_the_category();
+              ?>
 
               <?php if($i==1): ?>
                 <div class="col-lg-6">
@@ -92,7 +94,7 @@ $template = get_field('template',$term);
                       <div class="el__item__meta">
                         <h3 class="el__item__title text__truncate -n2"><?php the_title(); ?></h3>
                         <div class="d-flex align-items-center">
-                          <div class="el__item__tax me-3"><?php _e('Bài viết mới','dntheme'); ?></div>
+                          <div class="el__item__tax me-3"><?php echo $categories[0]->name; ?></div>
                           <div class="el__item__date"><span class="icon-clock"></span> <?php echo get_the_time("d/m/Y"); ?></div>
                         </div>
                       </div>
@@ -111,7 +113,7 @@ $template = get_field('template',$term);
                       <div class="el__item__meta">
                         <h3 class="el__item__title text__truncate -n2"><?php the_title(); ?></h3>
                         <div class="d-flex align-items-center">
-                          <div class="el__item__tax me-3"><?php _e('Bài viết mới','dntheme'); ?></div>
+                          <div class="el__item__tax me-3"><?php echo $categories[0]->name; ?></div>
                           <div class="el__item__date"><span class="icon-clock"></span> <?php echo get_the_time("d/m/Y"); ?></div>
                         </div>
                       </div>
@@ -146,7 +148,7 @@ $template = get_field('template',$term);
           // if($i>=2){
           ?>
             <div class="col-lg-4 col-sm-6 d-md-flex">
-                <?php get_template_part( 'template-parts/content','archive'); ?>
+                <?php get_template_part( 'template-parts/content','archive-large'); ?>
             </div>
         <?php
           // }

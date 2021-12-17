@@ -72,6 +72,7 @@
 }
 .new__item{
     position: relative;
+    width: 100%;
     margin-bottom: 30px;
     transition: all .5s;
     &:hover{
@@ -145,6 +146,7 @@
 		color: #011D52;
         margin-bottom: 8px;
         transition: all .5s;
+        min-height: 56px;
     }
 
     &:hover{
@@ -158,6 +160,12 @@
         }
     }
 
+    @media (max-width:1399px){
+    	&__title {
+		    font-size: 18px;
+		    line-height: 28px;
+		}
+    }
     @media (max-width:767px){
         margin-bottom: 20px;
         &.-s1{

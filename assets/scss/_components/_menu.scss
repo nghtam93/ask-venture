@@ -42,8 +42,8 @@
                     font-family: 'icomoon';
                     font-size: 5px;
                     margin-left: 5px;
-                    position: relative;
-                    top: -3px;
+                    position: absolute;
+                    top: 27px;
                     font-weight: 400;
                 }
             }
@@ -55,7 +55,7 @@
                 &:before{
                     content: "";
                     position: absolute;
-                    bottom: 0;
+                    bottom: 0px;
                     left: 0;
                     right: 0;
                     width: 0;
@@ -94,19 +94,21 @@
             li{
                 position:relative;
                 line-height:20px;
+                background: #061127;
                 &:not(:last-child){
                     border-bottom:1px solid rgba(255,255,255,0.1);
                 }
                 &:hover{
-                    background-color:#252A2B;
+                    background-color:rgba(21, 40, 78,1);
                     &>a{
                         color:#fff;
                     }
                 }
                a{
-                display: block;
-                padding:13px 15px;
-                color:#ffffff;
+                    display: block;
+                    padding:13px 15px;
+                    color:#ffffff;
+                    font-size: 14px;
                }
             }
             .sub-menu{top:0;left:100%;}
@@ -191,6 +193,9 @@ body.modal-open{
         left:0;
         opacity:1;
         pointer-events: auto;
+    }
+    .sub-menu{
+        display: none;
     }
     .nav__mobile--ul{
         list-style:none;
