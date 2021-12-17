@@ -11,7 +11,7 @@
 if ( ! function_exists( 'dntheme_logo' ) ) :
 function dntheme_logo(){
     $logo_img = get_field('logo', 'option');
-    $taglogo = (is_home()) ? 'h1' : 'p'; ?>
+    $taglogo = (is_home() || is_front_page()) ? 'h1' : 'p'; ?>
 
     <<?php echo $taglogo; ?> class="logo">
       <a href="<?php echo site_url(); ?>" class="" title="<?php bloginfo("name"); ?>">
